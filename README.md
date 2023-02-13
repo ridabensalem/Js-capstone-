@@ -32,7 +32,7 @@
 - [📝 License](#license)
 
 # 📖 [LeaderBoard ] <a name="about-project"></a>
-**[LeaderBorad ]** is a app that display the socres of the top players 
+**[Js capstone ]** is website that shows the Tech evens and reservations
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -55,9 +55,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add scores to the API]**
-- **[Fetch data form the API]**
-- **[display the names and scores]**
+- **[Add likes to the post ]**
+- **[Add comment to the post]**
+- **[Reserve the place for the event]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +71,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -88,13 +87,13 @@ Install this project with:
 
 
 ` cd my-project
-  gem install https://github.com/ridabensalem/Leaderboard.git`
+  gem install https://github.com/ridabensalem/Js-capstone-`
 
 ### Usage
 
 To run the project, execute the following command:
 ` 
-  git  clone https://github.com/ridabensalem/Leaderboard.git`
+  git  clone https://github.com/ridabensalem/Js-capstone-`
 
 ### Run tests
 
@@ -115,6 +114,11 @@ You can deploy this project using:
 - GitHub: [@ridabensalem](https://github.com/ridabnesalem)
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
+👤 **Author2**
+
+- GitHub: [@AyoMoses1](https://github.com/AyoMoses1)
+- Twitter: [@Ayo_Moses1](https://twitter.com/Ayo_Moses1)
+- LinkedIn: [Ayo Moses](https://www.linkedin.com/in/ayo-moses-493946184/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,9 +126,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Rank the top players]**
-- [ ] **[Include mobile version ]**
-- [ ] **[Animation and transitions to the project]**
+- [ ] **[Mobile version ]**
+- [ ] **[UI UX design  ]**
+- [ ] **[Add animation to the website]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +148,7 @@ If you like this project please give it a start and share it with your freinds
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Grace who helped me to solve some issuse in this projects 
+... 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
