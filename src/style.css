@@ -40,6 +40,10 @@ ul.nav-links {
   display: flex;
 }
 
+.overlay-content li {
+  list-style-type: none;
+}
+
 ul.nav-links li {
   list-style: none;
   margin-left: 2rem;
@@ -78,6 +82,85 @@ ul.nav-links a.active {
 
 .movie-actions button {
   background: #fff;
+}
+
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.9;
+  transition: opacity 200ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.overlay div.overlay-img {
+  width: 80%;
+}
+
+.overlay-content {
+  background: #fff;
+  width: 80%;
+  height: 90%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.overlay-content form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.overlay-content form input {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 10px;
+  width: 60%;
+}
+
+.overlay-content form button {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.overlay-content .flex {
+  display: flex;
+  align-items: center;
+}
+
+.overlay-content div:nth-child(2) {
+  margin-left: 20px;
+}
+
+.overlay h2 {
+  margin-bottom: 5rem;
+}
+
+.overlay h3,
+.overlay h5 {
+  margin-bottom: 10px;
+}
+
+.close-container {
+  display: flex;
+  justify-content: end;
+}
+
+.close-container span {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 577px) {
