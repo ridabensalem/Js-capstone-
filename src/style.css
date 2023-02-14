@@ -40,6 +40,10 @@ ul.nav-links {
   display: flex;
 }
 
+.overlay-content li {
+  list-style-type: none;
+}
+
 ul.nav-links li {
   list-style: none;
   margin-left: 2rem;
@@ -110,10 +114,6 @@ ul.nav-links a.active {
   box-sizing: border-box;
 }
 
-.overlay-content li {
-  list-style-type: none;
-}
-
 .overlay-content form {
   display: flex;
   flex-direction: column;
@@ -147,7 +147,8 @@ ul.nav-links a.active {
   margin-bottom: 5rem;
 }
 
-.overlay h3, .overlay h5 {
+.overlay h3,
+.overlay h5 {
   margin-bottom: 10px;
 }
 

@@ -7,15 +7,13 @@ const displayMovies = (movies) => {
     const { image, name } = movie.show;
     const list = document.createElement('li');
     list.setAttribute('class', 'movie-list');
-    const arrayElements = createMovieElements(image, name,movie.show);
+    const arrayElements = createMovieElements(image, name, movie.show);
     arrayElements.forEach((elem) => {
       list.appendChild(elem);
     });
     events.appendChild(list);
   });
 };
-
-
 
 const getAllEvents = async () => {
   const response = await apiHandler('GET', BASE_URL);
