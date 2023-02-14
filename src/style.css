@@ -56,15 +56,13 @@ ul.nav-links a.active {
 }
 
 #events {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 50px;
-  margin: 20px 0;
-}
-
-#events div {
-  width: 20%;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  grid-column-gap: 5%;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  padding: 0 20px;
 }
 
 #events .movie-list {
@@ -72,6 +70,19 @@ ul.nav-links a.active {
   margin: 20px 0;
 }
 
-#events .movie-list img {
-  width: 100%;
+.movie-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.movie-actions button {
+  background: #fff;
+}
+
+@media only screen and (min-width: 577px){
+  #events {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 0 100px;
+  }
 }
