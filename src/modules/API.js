@@ -1,6 +1,7 @@
-const baseUrl = 'https://www.eventbriteapi.com/v3/users/me/?token=PWQEI5BDOZEEQ2A5NVQT';
+import BASE_URL from "./utils";
+
 const getData = async () => {
-  const response = await fetch(baseUrl);
+  const response = await fetch('GET',BASE_URL);
   const data = await response.json();
   return data;
 };
