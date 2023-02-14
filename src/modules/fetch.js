@@ -1,13 +1,7 @@
-import BASE_URL from "./utils";
+import BASE_URL from './utils.js';
 
-const apiHandler = async (method, url) => {
-  return await fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      return json
-    });
-};
+const apiHandler = (method, url) => fetch(url)
+  .then((response) => response.json())
+  .then((json) => json);
 
 export default apiHandler;

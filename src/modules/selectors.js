@@ -1,3 +1,3 @@
-const events = document.querySelector('#events')
+const events = document.querySelector('#events');
 
-export default events
+export default events;

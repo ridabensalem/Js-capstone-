@@ -1,7 +1,7 @@
-import BASE_URL from "./utils";
+import BASE_URL from './utils.js';
 
 const getData = async () => {
-  const response = await fetch('GET',BASE_URL);
+  const response = await fetch('GET', BASE_URL);
   const data = await response.json();
   return data;
 };
