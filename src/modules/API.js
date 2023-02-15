@@ -11,6 +11,23 @@ export const getAllComments = async (id) => {
   const data = await response.json();
   return data;
 };
+export const postComment = async (id, name, comment) => {
+  const response = await fetch(`${INV_URL}/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: id,
+      username: name,
+      comment,
+    }),
+  });
+  const data = await response.json();
+  return data;
+};
+
+
 
 export const getAllLikes = async () => {
   const response = await fetch(`${INV_URL}/likes`, {
