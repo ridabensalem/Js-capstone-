@@ -102,15 +102,19 @@ ul.nav-links a.active {
   z-index: 10;
 }
 
-.overlay div.overlay-img {
-  width: 80%;
+.overlay div.overlay-image {
+  max-width: 25%;
+}
+
+.overlay img {
+  width: 100%;
 }
 
 .overlay-content {
   background: #fff;
   width: 80%;
-  height: 90%;
-  padding: 2rem;
+  height: 95%;
+  padding: 0.5rem 2rem;
   box-sizing: border-box;
 }
 
@@ -118,7 +122,7 @@ ul.nav-links a.active {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
   justify-content: center;
 }
 
@@ -173,6 +177,10 @@ ul.nav-links a.active {
 .movie-header i {
   cursor: pointer;
   color: red;
+}
+
+.comment {
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 577px) {
