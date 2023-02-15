@@ -1,7 +1,5 @@
 import events from './selectors.js';
-import apiHandler from './fetch.js';
 import { createMovieElements } from './utils.js';
-import { BASE_URL } from './API';
 
 export const displayMovies = (movies) => {
   movies.forEach((movie) => {
