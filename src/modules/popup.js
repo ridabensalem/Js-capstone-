@@ -1,3 +1,5 @@
+import { commentsCounter } from "./utils";
+
 export const displayReserve = (data, closeModal) => {
   const overlay = document.createElement('div');
   const body = document.querySelector('body');
@@ -36,7 +38,7 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
   const comments = await getArrayComments(data.id);
   const commentsList = [];
   comments.forEach((com) => {
-    commentsList.push(`<li>${com}</li>`);
+    commentsList.push(`<li class="comment">${com}</li>`);
   });
   const overlay = document.createElement('div');
   const body = document.querySelector('body');
@@ -50,7 +52,7 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
                             <div>
                               <h2>${data.name}</h2>
                               <p></p>
-                              <h5>Comments </h5>
+                              <h3></h3>
                               <ul class="comments-list">
                                 ${commentsList.join('')}
                               </ul>
@@ -65,6 +67,9 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
                           </form>
                         </div>`;
   body.appendChild(overlay);
+  const numberOfComments = commentsCounter()
+  const commentHeader = overlay.querySelector('h3')
+  commentHeader.innerHTML = `Comments (${numberOfComments})`
   const closeBtn = document.querySelector('.close-modal');
   closeBtn.addEventListener('click', closeModal);
 };

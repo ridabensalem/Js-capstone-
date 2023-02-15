@@ -61,3 +61,8 @@ export const likeMovie = async (id) => {
   const payload = { item_id: id };
   const response = await apiHandlerInv('POST', INV_URL, payload);
 };
+
+export const commentsCounter = () => {
+  const comments = document.querySelectorAll('.comment')
+  return comments.length
+}

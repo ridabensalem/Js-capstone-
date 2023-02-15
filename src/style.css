@@ -179,6 +179,10 @@ ul.nav-links a.active {
   color: red;
 }
 
+.comment {
+  font-weight: 400;
+}
+
 @media only screen and (min-width: 577px) {
   #events {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
