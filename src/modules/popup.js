@@ -6,7 +6,7 @@ export const displayReserve = (data, closeModal) => {
                           <div class="close-container"><span class="close-modal"><i class="fa-sharp fa-solid fa-xmark"></i><span></div>
                           <div class="flex">
                             <div class="overlay-image">
-                              <img src=${data.image.medium} alt="">
+                              <img src=${data.image.original} alt="">
                             </div>
                             <div>
                               <h2>${data.name}</h2>
@@ -45,7 +45,7 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
                           <div class="close-container"><span class="close-modal"><i class="fa-sharp fa-solid fa-xmark"></i><span></div>
                           <div class="flex">
                             <div class="overlay-image">
-                              <img src=${data.image.medium} alt="">
+                              <img src=${data.image.original} alt="">
                             </div>
                             <div>
                               <h2>${data.name}</h2>
