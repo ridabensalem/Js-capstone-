@@ -163,6 +163,18 @@ ul.nav-links a.active {
   font-size: 1.5rem;
 }
 
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.movie-header i {
+  cursor: pointer;
+  color: red;
+}
+
 @media only screen and (min-width: 577px) {
   #events {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

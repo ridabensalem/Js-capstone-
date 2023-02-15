@@ -1,5 +1,5 @@
-import { BASE_URL, getAllComments } from './API.js';
-import apiHandler from './fetch.js';
+import { BASE_URL, getAllComments, INV_URL } from './API.js';
+import apiHandler, { apiHandlerInv, apiHandlerMovie } from './fetch.js';
 import { commentPopUp, displayReserve } from './popup.js';
 
 const closeModal = () => {
@@ -27,7 +27,16 @@ export const createMovieElements = (image, name, movie) => {
   const btnContainer = document.createElement('div');
   const commentBtn = document.createElement('button');
   const reserveBtn = document.createElement('button');
+  const header = document.createElement('div');
+  header.classList.add('movie-header');
   const movieName = document.createElement('h3');
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fa-solid');
+  likeIcon.classList.add('like-icon');
+  likeIcon.setAttribute('id', movie.id);
+  likeIcon.classList.add('fa-heart');
+  header.appendChild(movieName);
+  header.appendChild(likeIcon);
   movieName.textContent = name;
   const img = document.createElement('img');
   commentBtn.setAttribute('class', 'comment-btn');
@@ -40,10 +49,15 @@ export const createMovieElements = (image, name, movie) => {
   img.setAttribute('src', image.medium);
   btnContainer.appendChild(reserveBtn);
   btnContainer.appendChild(commentBtn);
-  return [img, movieName, btnContainer];
+  return [img, header, btnContainer];
 };
 
 export const getAllMovies = async () => {
-  const response = await apiHandler('GET', BASE_URL);
+  const response = await apiHandlerMovie('GET', BASE_URL);
   return response;
+};
+
+export const likeMovie = async (id) => {
+  const payload = { item_id: id };
+  const response = await apiHandlerInv('POST', INV_URL, payload);
 };
