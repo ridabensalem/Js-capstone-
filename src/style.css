@@ -179,8 +179,19 @@ ul.nav-links a.active {
   color: red;
 }
 
+.movie-header h3 {
+  font-size: 22px;
+}
+
 .comment {
   font-weight: 400;
+}
+
+.span-likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 577px) {
