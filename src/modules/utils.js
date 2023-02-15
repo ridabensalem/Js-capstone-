@@ -27,16 +27,16 @@ export const createMovieElements = (image, name, movie) => {
   const btnContainer = document.createElement('div');
   const commentBtn = document.createElement('button');
   const reserveBtn = document.createElement('button');
-  const header = document.createElement('div')
-  header.classList.add('movie-header')
+  const header = document.createElement('div');
+  header.classList.add('movie-header');
   const movieName = document.createElement('h3');
-  const likeIcon = document.createElement('i')
-  likeIcon.classList.add('fa-solid')
-  likeIcon.classList.add('like-icon')
-  likeIcon.setAttribute('id', movie.id)
-  likeIcon.classList.add('fa-heart')
-  header.appendChild(movieName)
-  header.appendChild(likeIcon)
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fa-solid');
+  likeIcon.classList.add('like-icon');
+  likeIcon.setAttribute('id', movie.id);
+  likeIcon.classList.add('fa-heart');
+  header.appendChild(movieName);
+  header.appendChild(likeIcon);
   movieName.textContent = name;
   const img = document.createElement('img');
   commentBtn.setAttribute('class', 'comment-btn');
@@ -58,6 +58,6 @@ export const getAllMovies = async () => {
 };
 
 export const likeMovie = async (id) => {
-  const payload = {item_id: id}
-  const response = await apiHandlerInv('POST', INV_URL, payload)
-}
+  const payload = { item_id: id };
+  const response = await apiHandlerInv('POST', INV_URL, payload);
+};
