@@ -1,6 +1,5 @@
 import events from './selectors.js';
-import apiHandler from './fetch.js';
-import { BASE_URL, createMovieElements, displayReserve } from './utils.js';
+import { createMovieElements } from './utils.js';
 
 const displayMovies = (movies) => {
   movies.forEach((movie) => {
@@ -15,9 +14,4 @@ const displayMovies = (movies) => {
   });
 };
 
-const getAllEvents = async () => {
-  const response = await apiHandler('GET', BASE_URL);
-  displayMovies(response);
-};
-
-getAllEvents();
+export default displayMovies;
