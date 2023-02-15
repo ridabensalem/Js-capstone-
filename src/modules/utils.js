@@ -28,6 +28,9 @@ export const createMovieElements = (image, name, movie) => {
   const commentBtn = document.createElement('button');
   const reserveBtn = document.createElement('button');
   const header = document.createElement('div');
+  const span = document.createElement('span')
+  span.setAttribute('class', 'span-likes')
+  span.setAttribute('data-index', movie.id)
   header.classList.add('movie-header');
   const movieName = document.createElement('h3');
   const likeIcon = document.createElement('i');
@@ -35,8 +38,9 @@ export const createMovieElements = (image, name, movie) => {
   likeIcon.classList.add('like-icon');
   likeIcon.setAttribute('id', movie.id);
   likeIcon.classList.add('fa-heart');
+  span.appendChild(likeIcon)
   header.appendChild(movieName);
-  header.appendChild(likeIcon);
+  header.appendChild(span);
   movieName.textContent = name;
   const img = document.createElement('img');
   commentBtn.setAttribute('class', 'comment-btn');
