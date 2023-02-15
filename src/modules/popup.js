@@ -1,4 +1,5 @@
 import commentsCounter from './counter.js';
+import { postComment } from './API.js';
 
 export const displayReserve = (data, closeModal) => {
   const overlay = document.createElement('div');
@@ -61,12 +62,34 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
                           <form action="#">
                             <h3>Write your comment here </h3>
                             <input class="form_item" id="name" type="text" name="name" placeholder="your name" maxlength="30" required>
-                            <input class="form_item" id="start-date" type="email" name="start-date" placeholder="your insights" required>
+                            <input class="form_item" id="start-date" type="text" name="start-date" placeholder="your insights" required>
                             <div id="error-message"></div>
                             <button type="submit" class="form_button" >Comment</button>
                           </form>
                         </div>`;
   body.appendChild(overlay);
+  const commentForm = overlay.querySelector('form');
+  commentForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = commentForm.querySelector('#name').value;
+    const comment = commentForm.querySelector('#start-date').value;
+    const itemId = data.id;
+    try {
+      await postComment(itemId, name, comment);
+      const comments = await getArrayComments(itemId);
+      const commentsList = comments.map((com) => {
+        return `<li class="comment">${com}</li>`;
+      });
+      const numberOfComments = commentsCounter();
+      const commentHeader = overlay.querySelector('h3');
+      commentHeader.innerHTML = `Comments (${numberOfComments})`;
+      const commentsListElement = overlay.querySelector('.comments-list');
+      commentsListElement.innerHTML = commentsList.join('');
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
   const numberOfComments = commentsCounter();
   const commentHeader = overlay.querySelector('h3');
   commentHeader.innerHTML = `Comments (${numberOfComments})`;
