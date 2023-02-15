@@ -32,12 +32,12 @@ export const displayReserve = (data, closeModal) => {
   closeBtn.addEventListener('click', closeModal);
 };
 
-export const commentPopUp = async(data, closeModal, getArrayComments) => {
-  const comments = await getArrayComments(data.id)
-  const commentsList = []
-  comments.forEach(com => {
-    commentsList.push(`<li>${com}</li>`)
-  })
+export const commentPopUp = async (data, closeModal, getArrayComments) => {
+  const comments = await getArrayComments(data.id);
+  const commentsList = [];
+  comments.forEach((com) => {
+    commentsList.push(`<li>${com}</li>`);
+  });
   const overlay = document.createElement('div');
   const body = document.querySelector('body');
   overlay.classList.add('overlay');

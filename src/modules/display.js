@@ -1,7 +1,7 @@
 import events from './selectors.js';
 import { createMovieElements } from './utils.js';
 
-export const displayMovies = (movies) => {
+const displayMovies = (movies) => {
   movies.forEach((movie) => {
     const { image, name } = movie.show;
     const list = document.createElement('li');
@@ -14,3 +14,4 @@ export const displayMovies = (movies) => {
   });
 };
 
+export default displayMovies;

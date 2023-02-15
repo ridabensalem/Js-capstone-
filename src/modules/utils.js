@@ -1,6 +1,6 @@
-import { BASE_URL, getAllComments } from "./API";
-import apiHandler from "./fetch";
-import { commentPopUp, displayReserve } from "./popup";
+import { BASE_URL, getAllComments } from './API.js';
+import apiHandler from './fetch.js';
+import { commentPopUp, displayReserve } from './popup.js';
 
 const closeModal = () => {
   const overlay = document.querySelector('.overlay');
@@ -8,21 +8,20 @@ const closeModal = () => {
   body.removeChild(overlay);
 };
 
-
-const getArrayComments = async(id) => {
-  const commentsArray = []
-  const comments =  await getAllComments(id)
-  if(comments){
-    comments.forEach(com => {
-      const {comment, username, creation_date} = com
-      const li = document.createElement('li')
-      li.innerHTML = `${creation_date} ${comment} by ${username}`
-      commentsArray.push(li.innerHTML)
+const getArrayComments = async (id) => {
+  const commentsArray = [];
+  const comments = await getAllComments(id);
+  if (comments) {
+    comments.forEach((com) => {
+      const { comment, username } = com;
+      const createdDate = com.creation_date;
+      const li = document.createElement('li');
+      li.innerHTML = `${createdDate} ${comment} by ${username}`;
+      commentsArray.push(li.innerHTML);
     });
-    return commentsArray
   }
-}
-
+  return commentsArray;
+};
 
 export const createMovieElements = (image, name, movie) => {
   const btnContainer = document.createElement('div');
@@ -46,5 +45,5 @@ export const createMovieElements = (image, name, movie) => {
 
 export const getAllMovies = async () => {
   const response = await apiHandler('GET', BASE_URL);
-  return response
+  return response;
 };
