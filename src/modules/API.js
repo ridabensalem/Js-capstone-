@@ -27,8 +27,6 @@ export const postComment = async (id, name, comment) => {
   return data;
 };
 
-
-
 export const getAllLikes = async () => {
   const response = await fetch(`${INV_URL}/likes`, {
     method: 'GET',

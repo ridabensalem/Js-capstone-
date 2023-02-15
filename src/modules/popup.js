@@ -77,16 +77,14 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
     try {
       await postComment(itemId, name, comment);
       const comments = await getArrayComments(itemId);
-      const commentsList = comments.map((com) => {
-        return `<li class="comment">${com}</li>`;
-      });
+      const commentsList = comments.map((com) => `<li class="comment">${com}</li>`);
       const numberOfComments = commentsCounter();
       const commentHeader = overlay.querySelector('h3');
       commentHeader.innerHTML = `Comments (${numberOfComments})`;
       const commentsListElement = overlay.querySelector('.comments-list');
       commentsListElement.innerHTML = commentsList.join('');
     } catch (error) {
-      console.log(error);
+      throw new Error(error.message);
     }
   });
 
