@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.tvmaze.com/search/shows?q=girls';
+export const BASE_URL = "https://api.tvmaze.com/search/shows?q=girls";
 export const INV_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HhwngfSk0BVbaLtkUNy0';
 
 export const getAllComments = async (id) => {
@@ -17,5 +17,6 @@ const getData = async () => {
   const data = await response.json();
   return data;
 };
+
 
 export default getData;
