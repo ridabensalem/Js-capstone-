@@ -1,4 +1,4 @@
-import { commentsCounter } from "./utils";
+import commentsCounter from './counter.js';
 
 export const displayReserve = (data, closeModal) => {
   const overlay = document.createElement('div');
@@ -67,9 +67,9 @@ export const commentPopUp = async (data, closeModal, getArrayComments) => {
                           </form>
                         </div>`;
   body.appendChild(overlay);
-  const numberOfComments = commentsCounter()
-  const commentHeader = overlay.querySelector('h3')
-  commentHeader.innerHTML = `Comments (${numberOfComments})`
+  const numberOfComments = commentsCounter();
+  const commentHeader = overlay.querySelector('h3');
+  commentHeader.innerHTML = `Comments (${numberOfComments})`;
   const closeBtn = document.querySelector('.close-modal');
   closeBtn.addEventListener('click', closeModal);
 };
