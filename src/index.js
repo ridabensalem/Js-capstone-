@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import './style.css';
 import { getAllMovies, likeMovie } from './modules/utils.js';
 import displayMovies, { displayLikes } from './modules/display.js';
