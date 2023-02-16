@@ -8,6 +8,11 @@
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --open"
   },
+  "eslintConfig": {
+    "rules": {
+      "no-undef": "off"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ridabensalem/Js-capstone-.git"
