@@ -1,5 +1,6 @@
 import events from './selectors.js';
 import { createMovieElements } from './utils.js';
+import movieCounter from './movieCounter.js';
 
 const displayMovies = (movies) => {
   movies.forEach((movie) => {
@@ -12,6 +13,10 @@ const displayMovies = (movies) => {
     });
     events.appendChild(list);
   });
+  //
+  const numberOfMovies = movieCounter();
+  const movieHolderCount = document.querySelector('#movie_count');
+  movieHolderCount.innerHTML = `Number of movies  (${numberOfMovies})`;
 };
 export const displayLikes = (array) => {
   const movieElements = document.querySelectorAll('.span-likes');
