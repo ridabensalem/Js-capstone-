@@ -1,4 +1,4 @@
-import commentsCounter from './counter.js';
+import commentsCounter from './commentsCounter.js';
 import { postComment } from './API.js';
 
 export const displayReserve = (data, closeModal) => {

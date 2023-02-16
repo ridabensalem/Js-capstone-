@@ -1,8 +1,8 @@
-import events from './selectors.js';
+// import events from './selectors.js';
 import { clearPreviousDOM, createMovieElements } from './utils.js';
 import movieCounter from './movieCounter.js';
 
-const displayMovies = (movies) => {
+export const displayMovies = (movies, events) => {
   clearPreviousDOM()
   movies.forEach((movie) => {
     const { image, name } = movie.show;
@@ -18,6 +18,7 @@ const displayMovies = (movies) => {
   const movieHolderCount = document.querySelector('#movie_count');
   movieHolderCount.innerHTML = `Number of movies  (${numberOfMovies})`;
 };
+
 export const displayLikes = (array) => {
   const movieElements = document.querySelectorAll('.span-likes');
   movieElements.forEach((element) => {
