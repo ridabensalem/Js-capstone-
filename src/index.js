@@ -9,7 +9,6 @@ const displayAllMovies = async () => {
   displayMovies(movies);
   displayLikes(likesArray);
   const icons = document.querySelectorAll('.like-icon');
-  // eslint-disable-next-line no-undef
   icons.forEach((icon) => {
     const itemId = icon.getAttribute('id');
     icon.addEventListener('click', () => likeMovie(itemId));
