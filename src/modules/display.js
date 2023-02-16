@@ -1,8 +1,9 @@
 import events from './selectors.js';
-import { createMovieElements } from './utils.js';
+import { clearPreviousDOM, createMovieElements } from './utils.js';
 import movieCounter from './movieCounter.js';
 
 const displayMovies = (movies) => {
+  clearPreviousDOM()
   movies.forEach((movie) => {
     const { image, name } = movie.show;
     const list = document.createElement('li');
@@ -13,7 +14,6 @@ const displayMovies = (movies) => {
     });
     events.appendChild(list);
   });
-  //
   const numberOfMovies = movieCounter();
   const movieHolderCount = document.querySelector('#movie_count');
   movieHolderCount.innerHTML = `Number of movies  (${numberOfMovies})`;

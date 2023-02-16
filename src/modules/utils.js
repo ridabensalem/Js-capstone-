@@ -1,5 +1,6 @@
+import { displayAllMovies } from '../index.js';
 import { BASE_URL, getAllComments, INV_URL } from './API.js';
-import apiHandler, { apiHandlerInv, apiHandlerMovie } from './fetch.js';
+import { apiHandlerInv, apiHandlerMovie } from './fetch.js';
 import { commentPopUp, displayReserve } from './popup.js';
 
 const closeModal = () => {
@@ -64,4 +65,15 @@ export const getAllMovies = async () => {
 export const likeMovie = async (id) => {
   const payload = { item_id: id };
   const response = await apiHandlerInv('POST', INV_URL, payload);
+  displayAllMovies()
+  return response
 };
+
+export const clearPreviousDOM = () => {
+  const list = document.querySelectorAll('.movie-list')
+  list.forEach(ls => {
+    events.removeChild(ls)
+  })
+}
+
+  

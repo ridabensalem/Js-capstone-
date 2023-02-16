@@ -2,17 +2,18 @@ export const apiHandlerMovie = (method, url) => fetch(url)
   .then((response) => response.json())
   .then((json) => json);
 
-export const apiHandlerInv = (method, url, payload) => {
+export const apiHandlerInv = async(method, url, payload) => {
   if (payload) {
-    return fetch(`${url}/likes`, {
+    const response = await fetch(`${url}/likes`,
+     {
       method,
       body: JSON.stringify(payload),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    })
-      .then((response) => response.json())
-      .then((json) => json);
+    }
+    )
+    return response
   }
   return fetch(`${url}`, {
     method,

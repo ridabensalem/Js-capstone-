@@ -3,7 +3,7 @@ import { getAllMovies, likeMovie } from './modules/utils.js';
 import displayMovies, { displayLikes } from './modules/display.js';
 import { getAllLikes } from './modules/API.js';
 
-const displayAllMovies = async () => {
+export const displayAllMovies = async () => {
   const movies = await getAllMovies();
   const likesArray = await getAllLikes();
   displayMovies(movies);
