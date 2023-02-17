@@ -1,8 +1,9 @@
-import { BASE_URL, getAllComments, getAllLikes, INV_URL } from './API.js';
-import { apiHandlerInv, apiHandlerMovie } from './fetch.js';
+import {
+  getAllComments, getAllLikes, INV_URL,
+} from './API.js';
+import { apiHandlerInv } from './fetch.js';
 import { commentPopUp, displayReserve } from './popup.js';
-import { displayLikes, displayMovies } from './display';
-import events from './selectors';
+import { displayAllMoviesAndLikes } from './display.js';
 
 const closeModal = () => {
   const overlay = document.querySelector('.overlay');
@@ -59,35 +60,22 @@ export const createMovieElements = (image, name, movie) => {
 };
 
 export const getAllMovies = async () => {
-  const response = await fetch("https://api.tvmaze.com/search/shows?q=girls");
-  const data = await response.json()
-  return data
+  const response = await fetch('https://api.tvmaze.com/search/shows?q=girls');
+  const data = await response.json();
+  return data;
 };
 
 export const likeMovie = async (id) => {
   const payload = { item_id: id };
   const response = await apiHandlerInv('POST', INV_URL, payload);
-  displayAllMoviesAndLikes()
-  return response
+  displayAllMoviesAndLikes();
+  return response;
 };
 
 export const clearPreviousDOM = () => {
-  const list = document.querySelectorAll('.movie-list')
-  list.forEach(ls => {
-    events.removeChild(ls)
-  })
-}
-
-export const displayAllMoviesAndLikes = async () => {
-  const movies = await getAllMovies();
-  const likesArray = await getAllLikes();
-  displayMovies(movies, events);
-  displayLikes(likesArray);
-  const icons = document.querySelectorAll('.like-icon');
-  icons.forEach((icon) => {
-    const itemId = icon.getAttribute('id');
-    icon.addEventListener('click', () => likeMovie(itemId));
+  const list = document.querySelectorAll('.movie-list');
+  const events = document.querySelector('#events');
+  list.forEach((ls) => {
+    events.removeChild(ls);
   });
 };
-
-  

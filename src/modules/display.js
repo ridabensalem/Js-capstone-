@@ -1,9 +1,12 @@
-// import events from './selectors.js';
-import { clearPreviousDOM, createMovieElements } from './utils.js';
+/* eslint import/no-cycle: [2, { maxDepth: 1 }] */
+import {
+  clearPreviousDOM, createMovieElements, getAllMovies, likeMovie,
+} from './utils.js';
 import movieCounter from './movieCounter.js';
+import { getAllLikes } from './API.js';
 
 export const displayMovies = (movies, events) => {
-  clearPreviousDOM()
+  clearPreviousDOM();
   movies.forEach((movie) => {
     const { image, name } = movie.show;
     const list = document.createElement('li');
@@ -27,6 +30,19 @@ export const displayLikes = (array) => {
     const par = document.createElement('p');
     par.textContent = `${ind ? ind.likes : '0'} likes`;
     element.appendChild(par);
+  });
+};
+
+export const displayAllMoviesAndLikes = async () => {
+  const events = document.querySelector('#events');
+  const movies = await getAllMovies();
+  const likesArray = await getAllLikes();
+  displayMovies(movies, events);
+  displayLikes(likesArray);
+  const icons = document.querySelectorAll('.like-icon');
+  icons.forEach((icon) => {
+    const itemId = icon.getAttribute('id');
+    icon.addEventListener('click', () => likeMovie(itemId));
   });
 };
 

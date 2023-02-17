@@ -37,11 +37,3 @@ export const getAllLikes = async () => {
   const data = await response.json();
   return data;
 };
-
-const getData = async () => {
-  const response = await fetch('GET', BASE_URL);
-  const data = await response.json();
-  return data;
-};
-
-export default getData;
