@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import commentsCounter from './counter.js';
+import commentsCounter from '../modules/commentsCounter.js';
 
 describe('commentsCounter', () => {
   test('returns the correct number of comments', () => {

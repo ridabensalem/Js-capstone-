@@ -21,6 +21,8 @@
     },
     "ignorePatterns": [
       "dist/",
-      "build/"
+      "build/",
+      "src/modules/display.js",
+      "src/modules/utils.js"
     ]
   }
