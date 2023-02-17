@@ -31,7 +31,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [LeaderBoard ] <a name="about-project"></a>
+# 📖 [Js capstone (website movies) ] <a name="about-project"></a>
 **[Js capstone ]** is website that shows the different list of movies and gives you the ability to add reservations of your choice"
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -132,6 +132,7 @@ You can deploy this project using:
 - GitHub: [@ridabensalem](https://github.com/ridabnesalem)
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
+
 👤 **Author2**
 
 - GitHub: [@AyoMoses1](https://github.com/AyoMoses1)
