@@ -80,27 +80,43 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+- In order to run this project you need:
 
+- [git](https://git-scm.com/downloads): A tool for managing source code
+- [Visual Studio Code](https://code.visualstudio.com/): A source code editor
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): A simple web server utility for Visual Studio Code
+
+### Setup
+
+Clone this repository to your desired folder:
+ https://github.com/ridabensalem/Js-capstone-.git
+
+ Example commands:
+
+```sh
+  cd my-folder
+  git clone https://github.com/ridabensalem/Js-capstone-.git
+```
 
 ### Install
 
 Install this project with:
 
-
 ` cd my-project
-  gem install https://github.com/ridabensalem/Js-capstone-`
+  - Run npm install after cloning the repo
 
 ### Usage
 
-To run the project, execute the following command:
-` 
-  git  clone https://github.com/ridabensalem/Js-capstone-`
+### Usage
+
+- Run npm start for development. 
+- Run npm run build for production
+
 
 ### Run tests
 
 To run tests, run the following command:
-` npm test`
+` npm run test`
 
 
 ### Deployment
@@ -150,13 +166,17 @@ If you like this project please give it a start and share it with your freinds
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ... 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT]((./LICENSE.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
