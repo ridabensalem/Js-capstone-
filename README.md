@@ -132,6 +132,7 @@ You can deploy this project using:
 - GitHub: [@ridabensalem](https://github.com/ridabnesalem)
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
+
 👤 **Author2**
 
 - GitHub: [@AyoMoses1](https://github.com/AyoMoses1)
