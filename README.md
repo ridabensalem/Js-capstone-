@@ -55,9 +55,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Add likes to the post ]**
-- **[Add comment to the post]**
-- **[Reserve the place for the event]**
+- **[Add likes to the movie ]**
+- **[Add comment to the movie]**
+- **[Update the involvement API based on the action of the user ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,8 +126,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Mobile version ]**
-- [ ] **[UI UX design  ]**
+- [ ] **[Full navigation of the page ]**
+- [ ] **[Improve the UI/UX design  ]**
 - [ ] **[Add animation to the website]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
