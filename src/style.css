@@ -33,8 +33,9 @@ nav {
 }
 
 nav div.nav-logo {
-  border: 1px solid #000;
+  border: 4px solid #f74346;
   padding: 1rem;
+  color: #f74346;
   border-radius: 50%;
 }
 
@@ -52,13 +53,14 @@ ul.nav-links li {
 }
 
 ul.nav-links li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 ul.nav-links a.active {
   text-decoration: underline;
   font-weight: 600;
+  text-decoration-color: #f74346;
 }
 
 .overlay img {
