@@ -62,8 +62,10 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+![big-tv-tv](https://user-images.githubusercontent.com/87722869/219645447-e069fa86-be8e-4372-8bee-c996a5ae5497.gif)
 
-- [N/A]
+
+https://www.loom.com/share/6602c42be3c847bfb39a7059994f44f5
 
 
 
