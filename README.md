@@ -31,7 +31,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [LeaderBoard ] <a name="about-project"></a>
+# 📖 [Js capstone (website movies) ] <a name="about-project"></a>
 **[Js capstone ]** is website that shows the different list of movies and gives you the ability to add reservations of your choice"
 
 ## 🛠 Built With <a name="built-with"></a>
