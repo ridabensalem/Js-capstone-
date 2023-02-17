@@ -11,6 +11,7 @@ body {
   box-sizing: border-box;
   font-weight: 600;
   font-size: 1.2rem;
+  width: 100%;
 }
 
 footer {
@@ -59,19 +60,25 @@ ul.nav-links a.active {
   font-weight: 600;
 }
 
+.overlay img {
+  width: 100%;
+}
+
 #events {
-  display: grid;
-  grid-template-columns: 6fr 6fr;
-  grid-column-gap: 5%;
-  grid-row-gap: 20px;
-  justify-items: stretch;
-  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0 20px;
 }
 
-#events .movie-list {
+#events li.movie-list {
+  width: 45%;
   list-style: none;
   margin: 20px 0;
+}
+
+#events li.movie-list img {
+  width: 100%;
 }
 
 .movie-actions {
@@ -104,10 +111,6 @@ ul.nav-links a.active {
 
 .overlay div.overlay-image {
   max-width: 25%;
-}
-
-.overlay img {
-  width: 100%;
 }
 
 .overlay-content {
@@ -196,7 +199,20 @@ ul.nav-links a.active {
 
 @media only screen and (min-width: 577px) {
   #events {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 0 100px;
+    padding: 0 50px;
+  }
+
+  #events li.movie-list {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #events {
+    padding: 0 50px;
+  }
+
+  #events li.movie-list {
+    width: 18%;
   }
 }
